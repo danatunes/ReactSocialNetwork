@@ -1,16 +1,11 @@
-import s from "./Profile.module.css";
 import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = () => {
+const Profile = (props) => {
     return (
-        <div >
-          <div>
-          <img src='https://www.ourescapeclause.com/wp-content/uploads/2019/10/Venice-103-1024x683.jpg'/>
-          </div>
-           <div>
-             ava + desc
-           </div>
-         <MyPosts/>
+        <div>
+            <ProfileInfo/>
+            <MyPosts state={props.state}/>
         </div>
     );
 }
